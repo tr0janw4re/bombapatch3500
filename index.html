@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Controle de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>📝 Controle de Tarefas</h1></header>
+
+  <main>
+    <section class="card">
+      <h2>Nova categoria</h2>
+      <form id="form-categoria" class="linha">
+        <input id="cat-nome" placeholder="Nome da categoria" required>
+        <button>Adicionar</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2 id="titulo-form">Nova tarefa</h2>
+      <form id="form-tarefa">
+        <input type="hidden" id="tarefa-id">
+        <input id="titulo" placeholder="Título" required maxlength="100">
+        <textarea id="descricao" placeholder="Descrição"></textarea>
+        <div class="linha">
+          <input type="date" id="prazo">
+          <select id="categoria" required></select>
+        </div>
+        <div class="linha">
+          <button type="submit">Salvar</button>
+          <button type="button" id="cancelar" class="sec" hidden>Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Tarefas</h2>
+      <div class="linha filtros">
+        <input id="busca" placeholder="Buscar por título">
+        <select id="filtro-status">
+          <option value="">Todos os status</option>
+          <option value="pendente">Pendente</option>
+          <option value="em_andamento">Em andamento</option>
+          <option value="concluida">Concluída</option>
+        </select>
+        <select id="filtro-categoria"></select>
+      </div>
+      <p id="contadores"></p>
+      <div id="lista"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>

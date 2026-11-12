@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f2f4f8; margin: 0; color: #222; }
+header { background: #3b5bdb; color: #fff; padding: 1rem; text-align: center; }
+main { max-width: 800px; margin: 1rem auto; padding: 0 1rem; }
+.card { background: #fff; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;
+        box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+h2 { margin-top: 0; font-size: 1.1rem; }
+form { display: flex; flex-direction: column; gap: .6rem; }
+.linha { display: flex; gap: .6rem; flex-wrap: wrap; }
+.linha > * { flex: 1; min-width: 140px; }
+input, select, textarea, button { padding: .6rem; border: 1px solid #ccc;
+  border-radius: 6px; font-size: 1rem; }
+button { background: #3b5bdb; color: #fff; border: 0; cursor: pointer; }
+button.sec { background: #868e96; }
+button.perigo { background: #e03131; }
+.tarefa { border: 1px solid #ddd; border-left: 5px solid #868e96; border-radius: 6px;
+  padding: .8rem; margin-top: .6rem; }
+.tarefa.pendente { border-left-color: #f59f00; }
+.tarefa.em_andamento { border-left-color: #1c7ed6; }
+.tarefa.concluida { border-left-color: #2f9e44; }
+.tarefa.concluida h3 { text-decoration: line-through; color: #777; }
+.tarefa.vencida { background: #fff0f0; border-left-color: #e03131; }
+.tarefa.vencida .prazo { color: #e03131; font-weight: bold; }
+.tarefa h3 { margin: 0 0 .3rem; }
+.meta { font-size: .85rem; color: #555; margin: .3rem 0; }
+.acoes { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .5rem; }
+.acoes button, .acoes select { padding: .4rem .6rem; font-size: .9rem; }
